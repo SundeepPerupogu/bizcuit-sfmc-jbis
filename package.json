@@ -2,7 +2,7 @@
 	"name": "sfmc-jbis",
 	"version": "1.0.0",
 	"description": "",
-	"main": "dist/index.js",
+//	"main": "dist/index.js",
 	"scripts": {
 		"prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
 		"build": "tsc && cd 'src/frontend' && npm install && npm run build",
