@@ -28,11 +28,15 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <label for="futureUtcTime">Future UTC Time (HH:MM:SS):</label>
-        <input type="text" id="futureUtcTime" placeholder="e.g., 14:30:00">
-        <label for="userTimeZone">User Time Zone (e.g., UTC+01:00):</label>
-        <input type="text" id="userTimeZone" placeholder="e.g., UTC+01:00">
-    </div>
-</body>
+    <h1>Configure Custom Activity</h1>
+    <form id="config-form">
+        <label for="futureUtcTime">Future UTC Time:</label>
+        <input type="text" id="futureUtcTime" name="futureUtcTime" placeholder="HH:MM:SS"><br><br>
+        <label for="userTimeZone">User Time Zone:</label>
+        <input type="text" id="userTimeZone" name="userTimeZone" placeholder="UTC+01:00"><br><br>
+        <button type="button" id="save-button">Save</button>
+    </form>
+
+    <script src="customactivity.js"></script>
+ </body>
 </html>
