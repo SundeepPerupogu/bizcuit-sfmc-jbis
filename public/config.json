@@ -1,7 +1,8 @@
 {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "https://bizcuit-sfmc-jbis.onrender.com/icon.png",
+   "icon": "icon.png",
+    "iconSmall": "icon.png",
     "category": "message"
   },
   "type": "REST",
