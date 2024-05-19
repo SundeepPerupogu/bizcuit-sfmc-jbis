@@ -7,7 +7,7 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Custom Time Difference Activity",
+      "name": "Custom Time Delta Activity",
       "description": "Calculates time difference between current and future time in user's timezone"
     }
   },
@@ -36,6 +36,7 @@
     }
   },
   "configurationArguments": {
+    "applicationExtensionKey": "eb43d84b-32ae-44f7-8223-abdde6b9126c",
     "publish": {
       "url": "https://bizcuit-sfmc-jbis.onrender.com/publish",
       "verb": "POST",
