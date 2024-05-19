@@ -1,7 +1,25 @@
-// Set up any config you need (you might not need this)
+'use strict';
+
 requirejs.config({
-  basePath: "/scripts"
+	paths: {
+		postmonger: 'postmonger'
+	},
+	shim: {
+		'jquery.min': {
+			exports: '$'
+		},
+		'../customactivity': {
+			deps: ['jquery.min', 'postmonger']
+		}
+	}
 });
 
-// Tell RequireJS to load your main module (and its dependencies)
-require("mainmodule");
+requirejs(['jquery.min', '../customactivity'], function ($, customEvent) {
+});
+
+requirejs.onError = function (err) {
+	if (err.requireType === 'timeout') {
+		console.log('modules: ' + err.requireModules);
+	}
+	throw err;
+};
