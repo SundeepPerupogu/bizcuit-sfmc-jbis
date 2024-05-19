@@ -15,18 +15,15 @@
     "execute": {
       "inArguments": [
         {
-          "futureUtcTime": ""
+          "futureUtcTime": "{{Event.Trigger_Date}}"
         },
         {
-          "userTimeZone": ""
+          "userTimeZone": "UTC+01:00"
         }
       ],
       "outArguments": [
         {
-          "timeDifference": {
-            "dataType": "Text",
-            "isNullable": false
-          }
+          "timeDifference": "209min"
         }
       ],
       "url": "https://bizcuit-sfmc-jbis.onrender.com/execute",
