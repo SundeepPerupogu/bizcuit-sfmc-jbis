@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Add this line
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors()); // Add this line
 app.use(bodyParser.json());
 app.use(express.static('public'));  // To serve index.html, customactivity.js, etc.
 
@@ -40,7 +42,7 @@ app.post('/execute', (req, res) => {
 
 app.post('/publish', (req, res) => {
     try {
-        // Additional logic can be added here if needed
+							
         res.sendStatus(200);
     } catch (error) {
         handleError(res, error);
@@ -61,7 +63,7 @@ app.post('/validate', (req, res) => {
 
 app.post('/stop', (req, res) => {
     try {
-        // Additional logic can be added here if needed
+							
         res.sendStatus(200);
     } catch (error) {
         handleError(res, error);
