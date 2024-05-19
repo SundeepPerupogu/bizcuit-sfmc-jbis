@@ -1,54 +1,90 @@
 {
-    "workflowApiVersion": "1.1",
-    "metaData": {
-        "icon": "images/icon.png",
-        "category": "message"
-    },
-    "type": "REST",
-    "lang": {
-        "en-US": {
-            "name": "Custom Activity",
-            "description": "A custom activity for Marketing Cloud."
-        }
-    },
-    "arguments": {
-        "execute": {
-            "inArguments": [],
-            "outArguments": [],
-            "url": "/customActivity/execute",
-            "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
-        }
-    },
-    "configurationArguments": {
-        "applicationExtensionKey": "custom-activity-key",
-        "defaults": {
-            "activity": "default"
-        }
-    },
-    "wizardSteps": [
-        { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" },
-        { "label": "Step 3", "key": "step3" },
-        { "label": "Summary", "key": "summary" }
-    ],
-    "userInterfaces": {
-        "configModal": {
-            "height": 200,
-            "width": 284,
-            "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [],
-                "outArguments": []
-            }
-        }
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "https://your-service.onrender.com/icon.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Custom Time Difference Activity",
+      "description": "Calculates time difference between current and future time in user's timezone"
     }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "futureUtcTime": ""
+        },
+        {
+          "userTimeZone": ""
+        }
+      ],
+      "outArguments": [
+        {
+          "timeDifference": {
+            "dataType": "Text",
+            "isNullable": false
+          }
+        }
+      ],
+      "url": "https://your-service.onrender.com/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": false,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "publish": {
+      "url": "https://your-service.onrender.com/publish",
+      "verb": "POST",
+      "useJwt": false
+    },
+    "validate": {
+      "url": "https://your-service.onrender.com/validate",
+      "verb": "POST",
+      "useJwt": false
+    },
+    "stop": {
+      "url": "https://your-service.onrender.com/stop",
+      "verb": "POST",
+      "useJwt": false
+    }
+  },
+  "userInterfaces": {
+    "configModal": {
+      "height": 200,
+      "width": 300,
+      "url": "https://your-service.onrender.com/index.html"
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          {
+            "name": "futureUtcTime",
+            "dataType": "Text",
+            "isNullable": false
+          },
+          {
+            "name": "userTimeZone",
+            "dataType": "Text",
+            "isNullable": false
+          }
+        ],
+        "outArguments": [
+          {
+            "name": "timeDifference",
+            "dataType": "Text",
+            "isNullable": false
+          }
+        ]
+      }
+    }
+  }
 }
