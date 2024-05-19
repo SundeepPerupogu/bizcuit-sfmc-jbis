@@ -15,7 +15,7 @@
     "execute": {
       "inArguments": [
         {
-          "futureUtcTime": "{{Event.Trigger_Date}}"
+          "futureUtcTime": "{{Event.deltaDate.futureUtcTime}}"
         },
         {
           "userTimeZone": "UTC+01:00"
@@ -64,31 +64,6 @@
       "height": 200,
       "width": 300,
       "url": "https://bizcuit-sfmc-jbis.onrender.com/index.html"
-    }
-  },
-  "schema": {
-    "arguments": {
-      "execute": {
-        "inArguments": [
-          {
-            "name": "futureUtcTime",
-            "dataType": "Text",
-            "isNullable": false
-          },
-          {
-            "name": "userTimeZone",
-            "dataType": "Text",
-            "isNullable": false
-          }
-        ],
-        "outArguments": [
-          {
-            "name": "timeDifference",
-            "dataType": "Text",
-            "isNullable": false
-          }
-        ]
-      }
     }
   }
 }
