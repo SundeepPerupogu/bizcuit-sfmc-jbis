@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-
+app.use(express.static('public'));  // To serve index.html, customactivity.js, etc.
 app.post('/execute', (req, res) => {
     const inArguments = req.body.inArguments[0];
     const futureUtcTime = inArguments.futureUtcTime;
