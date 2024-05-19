@@ -39,16 +39,22 @@
     "publish": {
       "url": "https://bizcuit-sfmc-jbis.onrender.com/publish",
       "verb": "POST",
+      "header": "Content-Type: application/json",
+      "body": "{}",
       "useJwt": false
     },
     "validate": {
       "url": "https://bizcuit-sfmc-jbis.onrender.com/validate",
       "verb": "POST",
+      "header": "Content-Type: application/json",
+      "body": "{}",
       "useJwt": false
     },
     "stop": {
       "url": "https://bizcuit-sfmc-jbis.onrender.com/stop",
       "verb": "POST",
+      "header": "Content-Type: application/json",
+      "body": "{}",
       "useJwt": false
     }
   },
